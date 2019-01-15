@@ -223,6 +223,8 @@ nav h1 a {
   color: #666;
 }
 
+
+/* css for desktop screens...following a mobile first approach */
 @media only screen and (min-width: 800px) {
   #maincontent{max-width: 100%}
   .inside #map-container {
@@ -231,19 +233,30 @@ nav h1 a {
     width : 50%;
   }
   #restaurant-container {
-    width: 50%;
+    width: 80%;
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
   height: 87%;
-  position: absolute;
+  position: relative;
   right: 0;
   top: 80px;
-  width: 50%;
+  width: 100%;
 }
 .inside #map {
   background-color: #ccc;
   height: 100%;
   width: 100%;
+}
+.inside main{
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+#reviews-container{
+  grid-column: 1/3;
+} 
+body{ 
+  max-width: 900px;
+  margin: auto;
 }
 }
